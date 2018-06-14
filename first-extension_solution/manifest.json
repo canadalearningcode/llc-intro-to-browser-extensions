@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "First project to build a fresh chrome extension",
     "manifest_version": 2,
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "declarativeContent"],
     "icons": {
       "16": "images/get_started16.png",
       "32": "images/get_started32.png",

@@ -1,0 +1,92 @@
+body {
+  background-color:#ffffff;
+  font-size: 20px;
+  font-family: "Helvetica";
+  font-weight: 100;
+  margin:0;
+}
+
+a {
+  color: #000000;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  color: turquoise;
+  margin:0;
+  font-weight: 100;
+  padding: 0 10px 30px;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 400;
+  padding: 20px 10px;
+  color: turquoise;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2.slogan {
+  padding: 10px;
+  color: #000000;
+  font-weight: 100;
+}
+h2.bgcolor {
+  color: #ffffff; 
+}
+
+h2, h3, h4, h5, h6, p {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+ul, ol {
+  padding-left: 60px;          
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+img.logo {
+  width: 150px;
+}
+img.team {
+  width: 21%;
+  display: inline;
+  padding: 7px;
+}
+section.container {
+  width: 90%;
+  margin: 0 auto;
+}
+section.bgcolor {
+  background-color: turquoise;
+  padding: 10px 0 30px 0;
+}
+section.teamphotos{
+  text-align:center; 
+}
+
+header {
+  background-color: #ffffff; 
+  border-bottom: 5px solid #FCE742;
+}
+footer {
+  background-color: #333333;
+  padding: 20px 10px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}

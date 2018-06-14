@@ -1,0 +1,33 @@
+Instructor Notes
+
+Might be helpful to have a section on best practices/reminders, but most of the instructor notes should be a list of examples (per slide/concept)
+
+Note on lunch: Should be around 12:30, depending on time that food arrives. The deck is organized so that should be around the end of the discussion on ethics. 
+
+Reminder: Show learners how to open files. Go through the steps - e.g. Open Atom > File > add project folder…
+
+Reminder to show learners how to copy text from slides + paste into atom. Keyboard shortcuts can be new to some learners: Remember to mention them especially since they're invisible to them when you use keyboard shortcuts on the overheard projector.
+
+Remind learners to constantly SAVE + REFRESH (and show them how). Make a bunch of changes early to show how saving and refreshing isn't just how to code, it can be fun experimenting. Try an "oops, it broke, undo, save, refresh" to show how save experimenting is. 
+
+Share shortcuts and tips on navigating between windows. Hot corners, shortcut keys, taskbar hovers. Whatever works. 
+
+There are notes throughout some fo the slides that reference what to do if you are offline or the internet is slow where you are. If it's predictable that you will be in a low connectivity environment when delivering this course, it might be worthwhile editing the slides in advance to bring those notes into the primary text spot. 
+
+Example for slide 15, Manifest: “the manifest file is the foundation of the ship” + include list of examples/things it contains. Metaphor of construction can be useful here: We're building it together, this is the list of things in our construction project.
+
+Example for slide 24, Permissions: Facebook might be able to tell us “Hey Jimmy your friend's bday is coming up” → we can choose to think that’s creepy or helpful, but the point is we need to have the choice.
+
+Example for slide 24, Tabs. I always share stories of introducing people to tabbed browsing for the first time. It's like magic.  “I’m going to tell you something that will change your life. Tabs!” Then they have a million open - not sure if I helped or not.
+
+Example for slide 38, Ethics: Jurassic park phenomenon - “You spent so much time figuring if you could do something, you never stopped to ask yourself if you should.” Stop to ask yourself that question frequently.
+
+Example for slide 40, HTML vs CSS vs JS: House analogy - the html is like the structure/walls/furniture, the css is the design/paint/accessories, and the javascript is the functionality (like the alarm/security system). Also use the body analogy (bones, clothes, personality) if that works better for the crowd.
+
+Example for slide 55, Variables: How FB remembers birthdays, amazon remembers your shopping cart, etc.
+
+Example for slide 59, Strings and concatenation: Like a friendship bracelet - ‘stringing’ letter beads together
+
+Example for slide 64, dot notation: SNL skit or MadTV skit that used "aaan theeen" as the punchline. The dots are constantly saying “and then what?”
+
+Example for slide 69, Loops: Assembly line - humans mess up repetitive tasks → while computers are really good at them

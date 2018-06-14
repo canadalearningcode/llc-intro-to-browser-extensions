@@ -1,15 +1,29 @@
-#Ladies Learning Code slide deck template
+# Ladies Learning Code
 
-This slide deck includes features such as incremental display of content, interactive CSS demos built into the slides and markdown integration. View [slides.html](https://github.com/ladieslearningcode/llc-slidedeck-template/blob/master/slides.html) or http://ladieslearningcode.github.io/llc-slidedeck-template/slides.html for details on usage.
+## Intro to Chrome Extensions
+
+A full day introductory to Chrome Extensions workshop.
+
+## Quick Links
+
+Preview Instructor Notes: <a href="https://ladieslearningcode.github.io/llc-intro-to-chrome-extensions/notes-en.html">ladieslearningcode.github.io/llc-intro-to-chrome-extensions/notes-en.html</a>
+
+Preview Slides: <a href="https://ladieslearningcode.github.io/llc-intro-to-chrome-extensions/slides-en.html">ladieslearningcode.github.io/llc-intro-to-chrome-extensions/slides-en.html</a>
+
+## Attributions
+
+Content created by [William Wolfe-Wylie](http://www.wolfewylie.com) for [Canada Learning Code](http://canadalearningcode.ca).
+
+Slide presentation created by [Christina Truong](http://christinatruong.com) for [Canada Learning Code](http://canadalearningcode.ca).
+
+Email questions & comments to <content@canadalearningcode.ca>.
+
+### Contributing
 
 This project uses [editorconfig](http://editorconfig.org/) to maintain consistent coding style. Make sure your text editor has an editorconfig [plugin](http://editorconfig.org/#download) installed.
 
-**Atom Users:** The Whitespace plugin (which is installed by default) has `Trim trailing whitespace` option turned on by default. Turn this off in the Whitespace plugin settings, otherwise it overwrites the setting in [.editorconfig](.editorconfig). This is a known [issue](https://github.com/sindresorhus/atom-editorconfig/issues/3).  This is not required for workshop attendees, just for those wishing to make updates to the slides.
+**Atom Users:** The Whitespace plugin (which is installed by default) has `Trim trailing whitespace` option turned on by default. Turn this off in the Whitespace plugin settings, otherwise it overwrites the setting in [.editorconfig](.editorconfig). This is a known [issue](https://github.com/sindresorhus/atom-editorconfig/issues/3).  This is only required for editing the slides. Workshop learners are not required to add this plugin.
 
-Created with <a href="https://github.com/LeaVerou/csss/sample-slideshow.html">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>. Syntax highlighting courtesy of http://highlightjs.org. Best viewed in Chrome or Firefox.
-
+Please refer to https://github.com/ladieslearningcode/llc-slidedeck-template for instructions for customization of the slide deck and features. If there are any issues or fixes required for this workshop slide presentation, please open an issue or submit a pull request.
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-
-Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
-Email questions & comments to <content@ladieslearningcode.com>.
