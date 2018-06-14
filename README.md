@@ -1,14 +1,14 @@
 # Ladies Learning Code
 
-## Intro to Chrome Extensions
+## Intro to Browser Extensions with JavaScript
 
-A full day introductory to Chrome Extensions workshop.
+A full day introductory workshop where learners build their own Chrome Extension using JavaScript.
 
 ## Quick Links
 
-Preview Instructor Notes: <a href="https://ladieslearningcode.github.io/llc-intro-to-chrome-extensions/notes-en.html">ladieslearningcode.github.io/llc-intro-to-chrome-extensions/notes-en.html</a>
+Preview Instructor Notes: <a href="https://ladieslearningcode.github.io/llc-intro-to-browser-extensions/notes-en.html">ladieslearningcode.github.io/llc-intro-to-browser-extensions/notes-en.html</a>
 
-Preview Slides: <a href="https://ladieslearningcode.github.io/llc-intro-to-chrome-extensions/slides-en.html">ladieslearningcode.github.io/llc-intro-to-chrome-extensions/slides-en.html</a>
+Preview Slides: <a href="https://ladieslearningcode.github.io/llc-intro-to-browser-extensions/slides-en.html">ladieslearningcode.github.io/llc-intro-to-browser-extensions/slides-en.html</a>
 
 ## Attributions
 
