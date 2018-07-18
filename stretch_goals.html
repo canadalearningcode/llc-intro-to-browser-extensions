@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+<body class="en" data-duration="360">
+
+	<main>
+		<section class="slide centered" data-markdown>
+			<script type="text/template">
+				#Stretch goals
+
+				Whoa! You either finished early or you're back for more
+				
+				![](framework/img/workshop/stretch.gif)
+
+				Let's do this
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Streeeeeeeetch
+
+				Applying your transitions to the entire page at once is pretty fun. But it's more fun to control which images get your magic touch. 
+
+				Let's make that our next feature. 
+				 
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Event listeners
+
+				Events are very common in web development. Events are how a web browser interprets what happens when someone clicks their mouse, or scrolls down the page, or finishes loading a page, or hovers over an image on a page. There are literally hundreds of events firing from your web browser every second. 
+
+				Event *listeners* are small pieces of code that pay attention to those events. 
+
+				Event listeners can be very powerful. 
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Event listeners
+				
+				Event listeners are generally attached to elements that are already on your page. That way you can say "hey, image, when someone clicks on you, this is how you should behave." In that case, we attach an event listener to that image. 
+
+				Luckily for us, our previous work on this extension has already allowed us to gather images. We have a line that reads: 				
+
+				```javascript
+				var allImages = document.getElementsByTagName('img');
+				```
+
+				Then we have another line inside our loop over images that reads:
+				
+				```javascript
+				var thisImageHeight = allImages[i].clientHeight;
+				```
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Event listeners
+				
+				Remember that ```allImages[i]``` means this particular image in our loop. 
+
+				So instead of updating it immediately with our new picture, we can tell it to wait until someone clicks on it. 
+
+				```javascript
+				allImages[i].addEventListener('click', function() {
+					console.log(this)
+				})
+				```
+
+				Let's go over each part: 
+
+				- ```allImages[i]``` is the particular image on the page. 
+				- ```addEventListener``` is telling that image to pay attention to an event
+				- ```'click'``` tells it what event to pay attention to. It's going to wait for someone to click on it.
+				- ```function() {}``` is what happens when someone does click on it. The code to execute when someone clicks on that image goes in between the curly braces.
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Wait - what's THIS
+				
+				```javascript
+					console.log(this)
+				```
+
+				That's weird. 
+
+				The word ```this``` just refers to the item you just clicked on. What did you just click on? This. I just clicked on this: I'm going to console.log() it. 
+
+				It's weird to just have one word "this" but it's actually a very powerful tool in our tool box.
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Event listeners
+				
+				The code right now should look like this: 
+
+				```javascript
+				for (var i = 0; i < allImages.length; i++) {
+				    allImages[i].addEventListener('click', function() {
+						console.log(this)
+					})
+				}
+				```
+
+				Since we have ```this``` we can also act on it just as we did with our previous exercise. 
+
+				```
+				var thisImageHeight = this.clientHeight;
+				var thisImageWidth = this.clientWidth;
+				var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+				this.setAttribute('src', imageLink);
+				```
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Stretch goal the first
+				
+				All together now, your click-to-replace-image code will be: 
+
+				```javascript
+				for (var i = 0; i < allImages.length; i++) {
+					allImages[i].addEventListener('click', function() {
+						var thisImageHeight = this.clientHeight;
+						var thisImageWidth = this.clientWidth;
+						var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
+						this.setAttribute('src', imageLink);
+					})
+				}
+				```
+				
+				MAGIC!
+				
+			</script>
+		</section>
+
+		<section class="slide centered" data-markdown>
+			<script type="text/template">
+				#Stretch 2: The incredible disappearing element
+				
+				![](framework/img/workshop/drop.gif)
+
+
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Return of the stretch
+				
+				Now that we know how to act on individual elements on the page, we can have a little bit of fun with ```this``` in other ways, too. 
+
+				Like, we can make them disappear. 
+
+				Taken five minutes and see if you can come up with the two different ways we could remove an element from the page. 				
+				
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Stretch to the solution
+
+				First up, we have to select every text element or image element on the page.
+
+				```
+				var myElementsToDisappear = document.getElementsByTagName('img');
+				```
+
+				Note: You could use ```p``` tags or any other kind of tag in this exercise. The world is your oyster. 				
+
+				
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Stretch to the solution
+
+				Loop through them and add your click event listener to them, same as before. 
+
+				```
+				for (var i = 0; i < myElementsToDisappear.length; i++) {
+					myElementsToDisappear[i].addEventListener('click', function() {
+						
+					})
+				}
+				```
+				
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Stretch to the solution
+
+				From here there are a couple of different ways you can proceed. 
+
+				(One of the fun parts about working in code is there are always many different ways to solve a problem: The correct solution is the one that makes sense to you.)
+
+				You can either hide the element from view, or you can delete it entirely from the page. 
+				
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Hiding from view
+
+				Hiding something from view is a style question. We're making something invisible. Again, there are two ways to approach this task: 
+
+				- Changing its opacity. 
+				- Changing if it's rendered.
+
+				Option 1: 
+				```
+				this.setAttribute('style', 'opacity: 0')
+				```
+
+				Option 2:
+				```
+				this.setAttribute('style', 'visibility: hidden')
+				```
+				
+			</script>
+		</section>
+
+		<section class="slide" data-markdown>
+			<script type="text/template">
+				#Removing it entirely
+
+				Removing an element from the page entirely is a permanent move. Hiding it from view? That can be undone. Deleting it? Not so much. 
+
+				Removing it from view is also a much simpler proposal: 
+
+				```
+				this.remove()
+				```
+
+				Boom. Done. Gone.
+				
+			</script>
+		</section>
+
+		<section class="slide centered" data-markdown>
+			<script type="text/template">
+				#Good stretch, everyone!
+
+				![](framework/img/workshop/big_stretch.gif)
+				
+			</script>
+		</section>
+	</main>
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js">
+  	document.querySelectorAll
+  </script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
