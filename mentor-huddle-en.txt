@@ -1,0 +1,41 @@
+# Mentor Huddle Talking Points
+
+*Led By: Instructor*
+*Total Time: 10 minutes*
+
+## Introductions (5 minutes)
+* Introduce yourself
+* Ask mentors:
+  * Their name
+  * How they heard of Canada Learning Code
+  * If time: their latest obsession / interest
+
+## Experience Overview (3 minutes)
+* Brief workshop description
+  * We'll be creating Chrome Extensions using Javascript, with a focus on replacing images and styles on a webpage. (Example project: More kittens on the web!)
+* Workshop goals
+  * Light-hearted and fun for new learners
+  * Emphasis on having the power to change their experience & others' experiences on the web
+  * More awareness around privacy - the ability to think critically about what they are installing & using on their computers
+  * "Quick win" at the beginning before diving into Javascript specifics - so encourage learners to hang in there! We'll get to the 'why' behind the code right after
+  * Collaborative focus - even more than usual! Please help facilitate connections and discussions between learners.
+* Describe structure of workshop
+  * Introduction
+  * Focus on: Browser extensions
+  * Code Along + exercises (throughout)
+  * Lunch Break
+  * Focus on: Javascript
+  * More exercises + work session
+  * Stretch goals (if time)
+  * Demos + Wrap up
+* Heads-up about Contingency
+  * Notes are in the slides if the wifi isn't working
+  * We'll be applying the extension to the Offline 1 + Offline 2 websites, and using the offlineImages as placeholder images.
+
+## Assign Tasks (2 minutes)
+* Any remaining room Setup (If necessary)
+* Welcoming learners:
+  * Introduce yourself!
+  * Connecting to the internet
+  * Downloading learner files (from first slide) --> E.g. "Hi, I"m ____, have you downloaded the learner files?"
+  * Talking to learners as they wait, facilitating connections
