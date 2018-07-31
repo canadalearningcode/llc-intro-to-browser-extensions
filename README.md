@@ -1,4 +1,4 @@
-## English: (scroll down for French)
+## English:
 
 # National Ladies Learning Code Day
 
@@ -48,5 +48,3 @@ This project uses [editorconfig](http://editorconfig.org/) to maintain consisten
 Please refer to https://github.com/ladieslearningcode/llc-slidedeck-template for instructions for customization of the slide deck and features. If there are any issues or fixes required for this workshop slide presentation, please open an issue or submit a pull request.
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-
-## French: (coming soon)
