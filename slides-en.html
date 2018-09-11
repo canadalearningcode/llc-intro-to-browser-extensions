@@ -433,23 +433,6 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #You can also leave comments for yourself
-
-        If you want to leave little notes for yourself in your code, you can always do so with a // before your note.
-
-        The // is called "commenting" because it tells the computer to ignore that line of text. It's just a note to yourself.
-
-        Comments end up looking something like this:
-
-        ```javascript
-        //This is just a comment
-        ```
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
         #Checking in
 
         Overall your whole manifest file should look like this.
@@ -505,7 +488,7 @@
 
         This is the big part: making your script listen to your button.
 
-        In you script.js file, underneath the existing function that's already there:
+        **In your script.js file**, underneath the existing function that's already there:
 
         ```javascript
 chrome.pageAction.onClicked.addListener()
@@ -599,6 +582,23 @@ chrome.tabs.executeScript(
         * code is what you're going to execute inside of that tab <!-- .element: class="delayed" -->
         * document.body... is JavaScript and that's what you are sending into the tab to run on the page <!-- .element: class="delayed" -->
 
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #You can also leave comments for yourself
+
+        If you want to leave little notes for yourself in your code, you can always do so with a // before your note.
+
+        The // is called "commenting" because it tells the computer to ignore that line of text. It's just a note to yourself.
+
+        Comments end up looking something like this:
+
+        ```javascript
+        //This is just a comment
+        ```
 
       </script>
     </section>
