@@ -869,15 +869,15 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #All three files
 
-        We have three files now: The manifest, the script.js and the main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
+        We have three files now: manifest.json, script.js and main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
 
         manifest.json → script.js → main.js
 
         The manifest tells the browser to listen to what script.js tells it to do.
 
-        Script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
+        script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
 
-        Main.js tells the current page you're on to turn green.
+        main.js tells the current page you're on to turn green.
 
       </script>
     </section>
