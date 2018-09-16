@@ -1414,7 +1414,7 @@ for (var i = 0; i < allImages.length; i++) {
 var imageHeight = allImages[i].clientHeight;
 var imageWidth = allImages[i].clientWidth;
         ```
-        Those two lines create two new variables, and use the clientHeight and clientWidth attributes to store how big the original images are.
+        Those two lines create two new variables, and use the `clientHeight` and `clientWidth` attributes to store how big the original images are.
 
 
       </script>
@@ -1427,7 +1427,7 @@ var imageWidth = allImages[i].clientWidth;
         Then we can string together those new height and width values into the placeholder image link to tie it all together.
 
         ```javascript
-allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
 
         ```
 
@@ -1446,7 +1446,7 @@ var allImages = document.getElementsByTagName('img');
 for (var i = 0; i < allImages.length; i++) {
   var imageHeight = allImages[i].clientHeight;
   var imageWidth = allImages[i].clientWidth;
-  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
 }
         ```
 
@@ -1454,9 +1454,9 @@ for (var i = 0; i < allImages.length; i++) {
 
         ##Note
 
-        If you're using the offline mode, you can't use the width and height attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
+        If you're using the offline mode, you can't use the `width` and `height` attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
 
-        The first variable, baseLink, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
+        The first variable, `baseLink`, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
 
         ```
         var baseLink = "file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/";
@@ -1549,8 +1549,8 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         ```javascript
         allImages[i].addEventListener('click', function() {
-          console.log(this)
-        })
+          console.log(this);
+        });
         ```
 
         Let's go over each part:
@@ -1589,8 +1589,8 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```javascript
         for (var i = 0; i < allImages.length; i++) {
             allImages[i].addEventListener('click', function() {
-            console.log(this)
-          })
+            console.log(this);
+          });
         }
         ```
 
@@ -1677,7 +1677,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         for (var i = 0; i < myElementsToDisappear.length; i++) {
           myElementsToDisappear[i].addEventListener('click', function() {
 
-          })
+          });
         }
         ```
 
