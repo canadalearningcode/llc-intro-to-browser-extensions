@@ -804,8 +804,10 @@ chrome.pageAction.onClicked.addListener(function() {
         The `src` attribute is used to identify which image we're loading into the page.
 
         ```
-        <img src="images/picture.jpg" alt="">
+        <img src="images/picture.jpg" alt="Picture description">
         ```
+
+        In addition to the `src` attribute, the `alt` attribute is also required in order to help describe the image for people using assistive technology, such as a screen reader.
 
         An ```img``` tag by itself doesn't do much until you tell it what image file to load. Once it knows what image you want to use, though, then it becomes powerful.
 
