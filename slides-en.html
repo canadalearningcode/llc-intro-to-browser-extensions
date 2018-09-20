@@ -272,18 +272,18 @@
         Change your manifest file to include an "icons" parameter.
 
         ```javascript
-{
-  "name": "Getting Started Example",
-  "version": "2.0",
-  "description": "First project to build a fresh Chrome extension",
-  "manifest_version": 2,
-  "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
-  }
-}
+        {
+          "name": "Getting Started Example",
+          "version": "2.0",
+          "description": "First project to build a fresh chrome extension",
+          "manifest_version": 2,
+          "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
         ```
 
       </script>
@@ -346,14 +346,14 @@
         But what the button looks like, and what the button triggers, that's all defined in the manifest. It looks a little like this:
 
         ```javascript
-"page_action": {
-    "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    }
-}
+        "page_action": {
+          "default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
         ```
 
       </script>
@@ -425,7 +425,6 @@
           "scripts": ["script.js"],
           "persistent": false
         }
-
         ```
 
       </script>
@@ -438,32 +437,32 @@
         Overall your whole manifest file should look like this.
 
         ```javascript
-{
-    "name": "My first beautiful extension",
-    "version": "1.0",
-    "description": "First project to build a fresh Chrome extension",
-    "manifest_version": 2,
-    "permissions": ["activeTab", "declarativeContent"],
-    "icons": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    },
-    "page_action": {
-      "default_icon": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
-      }
-    },
-    "background": {
-      "scripts": ["script.js"],
-      "persistent": false
-    }
-}
-      ```
+        {
+          "name": "My first beautiful extension",
+          "version": "1.0",
+          "description": "First project to build a fresh chrome extension",
+          "manifest_version": 2,
+          "permissions": ["activeTab", "declarativeContent"],
+          "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          },
+          "page_action": {
+            "default_icon": {
+              "16": "images/get_started16.png",
+              "32": "images/get_started32.png",
+              "48": "images/get_started48.png",
+              "128": "images/get_started128.png"
+            }
+          },
+          "background": {
+            "scripts": ["script.js"],
+            "persistent": false
+          }
+        }
+        ```
 
       </script>
     </section>
@@ -491,7 +490,7 @@
         **In your script.js file**, underneath the existing function that's already there:
 
         ```javascript
-chrome.pageAction.onClicked.addListener()
+        chrome.pageAction.onClicked.addListener()
         ```
 
         This is a bit of a mouthful so let's look at it:
@@ -510,14 +509,14 @@ chrome.pageAction.onClicked.addListener()
         It's verbose, that's for sure. Here's the next part:
 
         ```javascript
-function() {}
+        function() {}
         ```
         A function is essentially a command, or series of commands, to run on demand. This part sits in between the parentheses for the previous part. It's what will be triggered as soon as you press the button.
 
         Together, they look like this:
 
         ```javascript
-chrome.pageAction.onClicked.addListener( function() {} );
+        chrome.pageAction.onClicked.addListener( function() {} );
         ```
 
         The portion in between the curly braces  {}  is where we focus our attention now.
@@ -532,7 +531,10 @@ chrome.pageAction.onClicked.addListener( function() {} );
         This is the part where we use the "active tab" permission we put in our manifest earlier.
 
         ```javascript
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
+        chrome.tabs.query(
+          {active: true, currentWindow: true},
+          function(tabs) { }
+        )
         ```
 
         Chrome first goes to the active window you have open right now, then the active tab you have open right now.
@@ -544,9 +546,12 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
         All together, your script file should look like this: <!-- .element: class="delayed" -->
 
         ```javascript
-chrome.pageAction.onClicked.addListener( function() {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
-});
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) { }
+          )
+        });
         ```
         <!-- .element: class="delayed" -->
 
@@ -567,10 +572,10 @@ chrome.pageAction.onClicked.addListener( function() {
         Inside our latest set of curly braces ( {} ) add this little bit:
 
         ```javascript
-chrome.tabs.executeScript(
-  tabs[0].id,
-  {code:  'document.body.style.backgroundColor = "green";' }
-);
+        chrome.tabs.executeScript(
+          tabs[0].id,
+          {code: 'document.body.style.backgroundColor = "green";'}
+        );
         ```
 
         PAUSE! Any guesses on what this means?
@@ -597,7 +602,7 @@ chrome.tabs.executeScript(
         Comments end up looking something like this:
 
         ```javascript
-        //This is just a comment
+        // This is just a comment
         ```
 
       </script>
@@ -610,25 +615,27 @@ chrome.tabs.executeScript(
         Overall your whole script.js file should look like this.
 
         ```javascript
-chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-   chrome.declarativeContent.onPageChanged.addRules([{
-     conditions: [new chrome.declarativeContent.PageStateMatcher({
-       pageUrl: {schemes: ['https', 'http', 'localhost', 'chrome']},
-     })
-     ],
-         actions: [new chrome.declarativeContent.ShowPageAction()]
-   }]);
- });
+        chrome.declarativeContent.onPageChanged.removeRules(
+          undefined,
+          function() {
+            chrome.declarativeContent.onPageChanged.addRules([{
+              conditions: [new chrome.declarativeContent.PageStateMatcher({pageUrl: {schemes: ['https', 'http', 'localhost', 'chrome']},})],
+              actions: [new chrome.declarativeContent.ShowPageAction()]
+            }]);
+          }
+        );
 
-chrome.pageAction.onClicked.addListener(function() {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-      tabs[0].id,
-      {code:  'document.body.style.backgroundColor = "green";' }
-    );
-  });
-});
-      ```
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) {
+              chrome.tabs.executeScript(
+              tabs[0].id,
+              {code: 'document.body.style.backgroundColor = "green";'}
+            );
+          });
+        });
+        ```
 
       </script>
     </section>
@@ -765,7 +772,11 @@ chrome.pageAction.onClicked.addListener(function() {
         Tags can be *nested* within other tags like this:
 
         ```
-        <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
+        <outertag>
+          outer content
+          <innertag>inner content</innertag>
+          outer content
+        </outertag>
         ```
 
         Nested tags create a family tree-like relationship, often referred to as *parent* and *child* nodes.
@@ -956,7 +967,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
         Here's what JavaScript looks like:
 
-        ```
+        ```javascript
         var myVariable = "Hello World";
         function sayHello(){
           alert(myVariable);
@@ -1074,11 +1085,9 @@ chrome.pageAction.onClicked.addListener(function() {
 
         The JavaScript above **concatenates** the three items together like so:
 
-        ```
-        var greetingFull = greeting + " " + greetingTime + "!";
-        var greetingFull = Good + space + morning + exclamation mark
-        var greetingFull = Good morning!
-        ```
+        * greeting + " " + greetingTime + "!";
+        * Good + space + morning + exclamation mark
+        * Good morning!
       </script>
     </section>
 
@@ -1281,11 +1290,11 @@ chrome.pageAction.onClicked.addListener(function() {
 
         That loop looks a bit like this:
         ```javascript
-var allImages = document.getElementsByTagName('img');
-console.log(allImages);
-for (var i = 0; i < allImages.length; i++) {
-  console.log(allImages[i]);
-}
+        var allImages = document.getElementsByTagName('img');
+        console.log(allImages);
+        for (var i = 0; i < allImages.length; i++) {
+          console.log(allImages[i]);
+        }
         ```
 
         Let's break that down:
@@ -1413,8 +1422,8 @@ for (var i = 0; i < allImages.length; i++) {
         To do this, we need to detect how big the original image in that spot was.
 
         ```javascript
-var imageHeight = allImages[i].clientHeight;
-var imageWidth = allImages[i].clientWidth;
+        var imageHeight = allImages[i].clientHeight;
+        var imageWidth = allImages[i].clientWidth;
         ```
         Those two lines create two new variables, and use the `clientHeight` and `clientWidth` attributes to store how big the original images are.
 
@@ -1429,8 +1438,7 @@ var imageWidth = allImages[i].clientWidth;
         Then we can string together those new height and width values into the placeholder image link to tie it all together.
 
         ```javascript
-allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
-
+        allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
         ```
 
       </script>
@@ -1443,13 +1451,13 @@ allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + 
         Altogether now, this is how that loop ought to look (approximately):
 
         ```javascript
-var allImages = document.getElementsByTagName('img');
+        var allImages = document.getElementsByTagName('img');
 
-for (var i = 0; i < allImages.length; i++) {
-  var imageHeight = allImages[i].clientHeight;
-  var imageWidth = allImages[i].clientWidth;
-  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
-}
+        for (var i = 0; i < allImages.length; i++) {
+          var imageHeight = allImages[i].clientHeight;
+          var imageWidth = allImages[i].clientWidth;
+          allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
+        }
         ```
 
         ----
@@ -1460,7 +1468,7 @@ for (var i = 0; i < allImages.length; i++) {
 
         The first variable, `baseLink`, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
 
-        ```
+        ```javascript
         var baseLink = "file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/";
         var imagesToPick = ['100.jpg', '200.jpg', '300.jpg', '400.jpg', '500.jpg'];
         var photoToInsert = imagesToPick[Math.floor(Math.random() * imagesToPick.length)];
@@ -1476,7 +1484,7 @@ for (var i = 0; i < allImages.length; i++) {
         If you want some extra fun, you can still spin the page when people click the button, giving the whole thing a fun transition effect.
 
         ```javascript
-document.body.style = "transition: 2s; transform: rotate(1080deg);";
+        document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```
 
       </script>
@@ -1570,7 +1578,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         #Wait - what's THIS
 
         ```javascript
-          console.log(this);
+        console.log(this);
         ```
 
         That's weird.
@@ -1590,15 +1598,15 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         ```javascript
         for (var i = 0; i < allImages.length; i++) {
-            allImages[i].addEventListener('click', function() {
+          allImages[i].addEventListener('click', function() {
             console.log(this);
-          });
+          })
         }
         ```
 
         Since we have ```this``` we can also act on it just as we did with our previous exercise.
 
-        ```
+        ```javascript
         var thisImageHeight = this.clientHeight;
         var thisImageWidth = this.clientWidth;
         var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
@@ -1659,7 +1667,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         First up, we have to select every text element or image element on the page.
 
-        ```
+        ```javascript
         var myElementsToDisappear = document.getElementsByTagName('img');
         ```
 
@@ -1675,7 +1683,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Loop through them and add your click event listener to them, same as before.
 
-        ```
+        ```javascript
         for (var i = 0; i < myElementsToDisappear.length; i++) {
           myElementsToDisappear[i].addEventListener('click', function() {
 
@@ -1709,12 +1717,12 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         - Changing if it's rendered.
 
         Option 1:
-        ```
+        ```javascript
         this.setAttribute('style', 'opacity: 0')
         ```
 
         Option 2:
-        ```
+        ```javascript
         this.setAttribute('style', 'visibility: hidden')
         ```
 
@@ -1729,7 +1737,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Removing it from view is also a much simpler proposal:
 
-        ```
+        ```javascript
         this.remove()
         ```
 
