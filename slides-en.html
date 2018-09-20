@@ -85,7 +85,7 @@
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #Coders' Code
+        #Coders' code
 
         1. Be friendly and welcoming
         1. Be respectful of others by choosing words and actions with care
@@ -234,7 +234,7 @@
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        # The Manifest file
+        # The manifest file
 
         The manifest file is going to come up a lot in this workshop. It's the backbone of everything that your extension is and does. The manifest is where you can set the title and description, icons and all of those fancy details. But it's also where you can ask people using your extension for special permissions to control web pages.
 
@@ -394,13 +394,13 @@
 
         Every Chrome extension ever made requires permission to operate. It's just a question of what they want to do and what they need permission from the user to do.
 
-        Take **10 minutes** with your neighbour to look at some examples of Manifest.json files in other chrome extensions and see what kinds of permissions they're looking for.
+        Take **10 minutes** with your neighbour to look at some examples of manifest.json files in other Chrome extensions and see what kinds of permissions they're looking for.
 
-        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud to butt</a>
+        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud To Butt</a>
 
-        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as ebook</a>
+        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as eBook</a>
 
-        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamperchrome</a>
+        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamper Chrome</a>
 
         <a href="https://github.com/th3crack3n/giphy-extension/blob/master/manifest.json">Giphy</a>
 
@@ -810,13 +810,15 @@
       <script type="text/template">
         # Attributes in images
 
-        Images, the focus of our work today, have one really really import attribute.
+        Images, the focus of our work today, have one really really important attribute.
 
         The `src` attribute is used to identify which image we're loading into the page.
 
         ```
-        <img src="images/picture.jpg" alt="">
+        <img src="images/picture.jpg" alt="Picture description">
         ```
+
+        In addition to the `src` attribute, the `alt` attribute is also required in order to help describe the image for people using assistive technology, such as a screen reader.
 
         An ```img``` tag by itself doesn't do much until you tell it what image file to load. Once it knows what image you want to use, though, then it becomes powerful.
 
@@ -880,15 +882,15 @@
       <script type="text/template">
         #All three files
 
-        We have three files now: The manifest, the script.js and the main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
+        We have three files now: manifest.json, script.js and main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
 
-        Manifest --> script.js --> main.js
+        manifest.json → script.js → main.js
 
         The manifest tells the browser to listen to what script.js tells it to do.
 
-        Script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
+        script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
 
-        Main.js tells the current page you're on to turn green.
+        main.js tells the current page you're on to turn green.
 
       </script>
     </section>
@@ -931,11 +933,11 @@
 
         Pair up and take some time to figure out what else you can change this page using some of these other style rules:
 
-        Change <a href="https://www.w3schools.com/cssref/pr_font_font-size.asp">font sizes</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font sizes</a>?
 
-        Change <a href="https://www.w3schools.com/cssref/css_colors.asp">colours</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">colours</a>?
 
-        Change <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">rotations and angles</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">rotations and angles</a>?
 
         ----
 
@@ -956,7 +958,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # What Is JavaScript?
+        # What is JavaScript?
 
         * controls the *behavior* of HTML documents
         * used to animate, hide or show items
@@ -977,7 +979,7 @@
 
     <section class="slide highlight" data-markdown>
       <script type="text/template">
-        # JavaScript is a Programming Language
+        # JavaScript is a programming language
 
         Because JavaScript is a programming language, the structure and syntax include more complexities than HTML or CSS.
 
@@ -1049,7 +1051,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Variable Types: Strings
+        # Variable types: Strings
 
         When storing text values, like words or sentences, the variable type is a *string* value.
 
@@ -1071,7 +1073,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Variable Types: Strings & Concatenation
+        # Variable types: Strings & concatenation
 
         You can *add* strings together to join multiple values. This is called **concatenation**.
 
@@ -1101,7 +1103,7 @@
         var allImages = document.getElementsByTagName('img');
         ```
 
-        This creates a variable that stores a list of every image on the page, which we can take a look at individually in something called The Console.
+        This creates a variable that stores a list of every image on the page, which we can take a look at individually in something called the Console.
       </script>
     </section>
 
@@ -1113,7 +1115,7 @@
         * enter commands and interact directly with a web page
         * can also log diagnostic information and check for errors
 
-        The console in Chrome looks like this:
+        The Console in Chrome looks like this:
         ![The Console](framework/img/workshop/the_console_x.jpg)
 
         **Important!** The blue `>` symbol represents a space to enter your input but you don't have to actually type the symbol.
@@ -1124,7 +1126,7 @@
       <script type="text/template">
         #Accessing the Console
 
-        You can open the console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
+        You can open the Console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
 
         Keyboard shortcut:
         `COMMAND + OPTION + J` (MAC)  / `CONTROL + SHIFT + J` (WINDOWS)
@@ -1133,28 +1135,28 @@
 
         Select: `View > Developer > JavaScript Console`.
 
-        Open the console in this slide presentation. Take a moment to practice opening and closing the console until you’re comfortable with it.
+        Open the Console in this slide presentation. Take a moment to practice opening and closing the Console until you’re comfortable with it.
 
         ---
 
         ###Pro tip!
-        The console also shows any errors on the page so if you open the console on any existing web page, you *may* see some error messages.
+        The Console also shows any errors on the page so if you open the Console on any existing web page, you *may* see some error messages.
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Using the console
+        # Using the Console
 
-        In our main.js file, we can write new images to the console so we can see what they do and where they are.
+        In our main.js file, we can write new images to the Console so we can see what they do and where they are.
 
         ```javascript
         var allImages = document.getElementsByTagName('img');
         console.log(allImages);
         ```
 
-        Now refresh and run your extension: You'll see something new being injected into the console. It's a list of every image on the page. Hover your mouse over each of them and it will even show you which image on the page that one is.
+        Now refresh and run your extension: You'll see something new being injected into the Console. It's a list of every image on the page. Hover your mouse over each of them and it will even show you which image on the page that one is.
 
       </script>
     </section>
@@ -1175,7 +1177,7 @@
 
         And then what?
 
-        Go to the console.
+        Go to the Console.
 
         And then what?
 
@@ -1189,7 +1191,7 @@
       <script type="text/template">
         # Exercise (5 minutes)
 
-        Spend some time familiarizing yourself with the console and how to collect elements from your page. Can you collect h1 tags? Images? Paragraphs?
+        Spend some time familiarizing yourself with the Console and how to collect elements from your page. Can you collect h1 tags? Images? Paragraphs?
 
       </script>
     </section>
@@ -1654,7 +1656,7 @@
 
         Like, we can make them disappear.
 
-        Taken five minutes and see if you can come up with the two different ways we could remove an element from the page.
+        Take five minutes and see if you can come up with the two different ways we could remove an element from the page.
 
       </script>
     </section>
@@ -1776,7 +1778,7 @@
         * placeholder images!
         * some of the ethics around running your code on other people's computers
 
-        <p>We can also use what we've learned today to create something fun, like this: <a href="http://nthitz.github.io/turndownforwhatjs/">Turn Down For What</a>, or somthing helpful, like this: <a href="https://chrome.google.com/webstore/detail/zoom-text-only/jamhfhbppcmkgghlkeieococonlbppjg">Zoom Text Only</a></p><!-- .element: class="delayed" -->
+        <p>We can also use what we've learned today to create something fun, like this: <a href="http://nthitz.github.io/turndownforwhatjs/">Turn Down For What</a>, or something helpful, like this: <a href="https://chrome.google.com/webstore/detail/zoom-text-only/jamhfhbppcmkgghlkeieococonlbppjg">Zoom Text Only</a></p><!-- .element: class="delayed" -->
 
       </script>
     </section>
