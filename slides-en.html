@@ -30,7 +30,7 @@
       </h1>
 
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <img class="instructor" src="https://placehold.it/225x225" alt="Instructor Name">
       <h2><span class="cursive">with</span> Instructor name</h2>
       <ul>
         <li><a href="mailto:">hello@email.com</a></li>
@@ -113,7 +113,7 @@
 
         Browser extensions are small pieces of code that make your web browsing experience more fun, more useful, more private or more public.
 
-        ![](framework/img/workshop/extensionExamples.png)
+        ![Various browser extension icons.](framework/img/workshop/extensionExamples.png)
 
         They usually show themselves as buttons in the top bar of your web browser and allow some extra functionality that doesn't come with your browser by default.
       </script>
@@ -157,7 +157,7 @@
 
         The internet needs more cats! So we're going to build an extension that will replace every image on the page with kittens (or the animal of your choosing). It should look a little like this: <!-- .element: class="delayed" -->
 
-        ![](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
+        ![wolfewylie's Twitter profile, with all images replaced with cat images.](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
 
       </script>
     </section>
@@ -168,7 +168,7 @@
 
         We'll be working in Chrome today. So to get started, we need to get Chrome to treat us like the software developers we are.
 
-        ![](framework/img/workshop/got_this.gif)
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
       </script>
     </section>
 
@@ -176,7 +176,7 @@
       <script type="text/template">
         #Get into the extensions manager
 
-        ![](framework/img/workshop/chrome_extension_location.png)
+        ![Click 'Customize and and Control Google Chrome' (three dots in the top left of the browser window). Go to 'More Tools', and then click on 'Extensions'.](framework/img/workshop/chrome_extension_location.png)
       </script>
     </section>
 
@@ -228,7 +228,7 @@
 
         The basics of a browser extension are pretty straight forward. All we have to kick things off are a folder of images, and a file called manifest.json.
 
-        ![](framework/img/workshop/first_files.png)
+        ![The project directory, which contains an images folder and a file called manifest.json. The images folder contains 4 images: get_started16.png, get_started32.png, get_started48.png, and get_started128.png.](framework/img/workshop/first_files.png)
       </script>
     </section>
 
@@ -306,7 +306,7 @@
 
         Sometimes you'll get an error when you try to refresh your extension. That might look like this:
 
-        ![](framework/img/workshop/extension_load_error.png)
+        ![Failed to load extension. File: ~/Documents/LLC/clc-intro-to-chrome-extensions/first-extension. Error: Manifest is not valid JSON. Line: 12, column: 4, Trailing comma not allowed.](framework/img/workshop/extension_load_error.png)
 
         The good news it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
       </script>
@@ -319,14 +319,14 @@
 
         You've made a browser extension!
 
-        ![](framework/img/workshop/thatsall.gif)
+        ![The ending screen from Looney Toons. "That's All Folks".](framework/img/workshop/thatsall.gif)
 
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        ![](framework/img/workshop/kidding.gif)
+        ![Christina Aquilera from the TV show, the Voice, raising her hands out and saying "Just Kidding!"](framework/img/workshop/kidding.gif)
 
         This is what we call a "Hello World" moment: Proof that the basic idea works. Now we can start building on it.
 
@@ -363,7 +363,7 @@
       <script type="text/template">
         #Press the button
 
-        ![](framework/img/workshop/pressbutton.gif)
+        ![Buddy the Elf from the movie Elf pressing all the buttons in an elevator.](framework/img/workshop/pressbutton.gif)
 
         Buttons are really fun. We should make our button do something.
       </script>
@@ -638,7 +638,7 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #That's right
 
-        ![](framework/img/workshop/unimpressed.gif)
+        ![Deputy Chief Hardy from the movie 22 Jump Street looking very unimpressed.](framework/img/workshop/unimpressed.gif)
 
         All of those steps until now have allowed us to run one line of JavaScript on the page loaded into our tab:
 
@@ -675,7 +675,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
         You have all of the power.
 
-        ![](framework/img/workshop/hack.gif)
+        ![A cartoon character dressed in all black with orange goggles furiously typing on a laptop.](framework/img/workshop/hack.gif)
 
       </script>
     </section>
@@ -918,7 +918,7 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #Exercise in pairs (10 minutes)
 
-        ![](framework/img/workshop/corgis.gif)
+        ![Two corgis walking side-by-side on a moving treadmill. One has a floppy ear.](framework/img/workshop/corgis.gif)
 
         Pair up and take some time to figure out what else you can change this page using some of these other style rules:
 
@@ -1026,7 +1026,7 @@ chrome.pageAction.onClicked.addListener(function() {
           * the result looks kind of like `camelHumps`
         * Cannot contain reserved symbols:
           * math symbols (+, -, =, etc...)
-          * javascript-specific symbols ({, }, :, etc...)
+          * JavaScript-specific symbols ({, }, :, etc...)
         * Cannot begin with:
           * a digit (0 - 9)
         * JavaScript is case sensitive
@@ -1213,12 +1213,12 @@ chrome.pageAction.onClicked.addListener(function() {
         Images are so much fun. In the wild world of HTML, images look like this:
 
         ```
-        <img alt="" src="http://placekitten.com/100/100">
+        <img src="http://placekitten.com/100/100" alt="">
         ```
 
         Unlike a lot of tags, ```img``` tags don't have a closing ```</img>``` at their close.
 
-        That little src= is the source attribute, linking the image tag to the actual image file.
+        That little `src=` is the source attribute, linking the image tag to the actual image file.
 
         We now have the power to change that link as we see fit.
 
@@ -1324,7 +1324,7 @@ for (var i = 0; i < allImages.length; i++) {
         ```javascript
         var participants = allOfYouHereToday;
 
-        for (var i = 0; i < participants.length(); i++) {
+        for (var i = 0; i < participants.length; i++) {
             participants[i].naeNae;
             participants[i].jazzHands;
             participants[i].vogue;
@@ -1368,7 +1368,9 @@ for (var i = 0; i < allImages.length; i++) {
 
         1. There's a shortcut. If you start typing 'for' in your Atom editor, then hit the "tab" key, it will automatically expand a loop for you. Nifty!
 
-        2. There are cases where you might have more than one loop in your script. In that case, it makes sense to not use the same counter variable for both of them, because they could get confused with each other. In our example, we're using i as the counter variable name. You can use any variable name you like, but using the same variable for two different purposes is usually a bad idea.
+        2. There are cases where you might have more than one loop in your script. In that case, it makes sense to not use the same counter variable for both of them, because they could get confused with each other.
+        
+          In our example, we're using `i` as the counter variable name. You can use any variable name you like, but using the same variable for two different purposes is usually a bad idea.
 
       </script>
     </section>
@@ -1378,13 +1380,13 @@ for (var i = 0; i < allImages.length; i++) {
       <script type="text/template">
         # Replacing the images
 
-        Now that we have the allImages[i] that represents the image we want to change, we can add a line of javascript in our loop that looks like this:
+        Now that we have the `allImages[i]` variable that represents the image we want to change, we can add a line of JavaScript in our loop that looks like this:
 
         ```javascript
         allImages[i].setAttribute('src', 'http://placekitten.com/200/300');
         ```
 
-        That will take the src attribute of the image and replace whatever is currently there with a placekitten link.
+        That will take the `src` attribute of the image and replace whatever is currently there with a placekitten link.
 
         Go ahead. Give it a try. Load up any page and place some kittens (or puppies or bears or Bill Murray).
 
@@ -1414,7 +1416,7 @@ for (var i = 0; i < allImages.length; i++) {
 var imageHeight = allImages[i].clientHeight;
 var imageWidth = allImages[i].clientWidth;
         ```
-        Those two lines create two new variables, and use the clientHeight and clientWidth attributes to store how big the original images are.
+        Those two lines create two new variables, and use the `clientHeight` and `clientWidth` attributes to store how big the original images are.
 
 
       </script>
@@ -1427,7 +1429,7 @@ var imageWidth = allImages[i].clientWidth;
         Then we can string together those new height and width values into the placeholder image link to tie it all together.
 
         ```javascript
-allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
 
         ```
 
@@ -1446,7 +1448,7 @@ var allImages = document.getElementsByTagName('img');
 for (var i = 0; i < allImages.length; i++) {
   var imageHeight = allImages[i].clientHeight;
   var imageWidth = allImages[i].clientWidth;
-  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
+  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
 }
         ```
 
@@ -1454,9 +1456,9 @@ for (var i = 0; i < allImages.length; i++) {
 
         ##Note
 
-        If you're using the offline mode, you can't use the width and height attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
+        If you're using the offline mode, you can't use the `width` and `height` attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
 
-        The first variable, baseLink, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
+        The first variable, `baseLink`, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
 
         ```
         var baseLink = "file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/";
@@ -1488,7 +1490,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         (Or <a href="#slide100">Skip ahead</a> to wrap up)
 
-        ![](framework/img/workshop/stretch.gif)
+        ![The Incredibles posing for battle.](framework/img/workshop/stretch.gif)
 
         Let's do this
       </script>
@@ -1549,8 +1551,8 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         ```javascript
         allImages[i].addEventListener('click', function() {
-          console.log(this)
-        })
+          console.log(this);
+        });
         ```
 
         Let's go over each part:
@@ -1568,7 +1570,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         #Wait - what's THIS
 
         ```javascript
-          console.log(this)
+          console.log(this);
         ```
 
         That's weird.
@@ -1589,8 +1591,8 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```javascript
         for (var i = 0; i < allImages.length; i++) {
             allImages[i].addEventListener('click', function() {
-            console.log(this)
-          })
+            console.log(this);
+          });
         }
         ```
 
@@ -1619,7 +1621,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
             var thisImageWidth = this.clientWidth;
             var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
             this.setAttribute('src', imageLink);
-          })
+          });
         }
         ```
 
@@ -1632,7 +1634,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         #Stretch 2: The incredible disappearing element
 
-        ![](framework/img/workshop/drop.gif)
+        ![Violet from the Incredibles touches her uniform and it disappears. She looks shocked.](framework/img/workshop/drop.gif)
 
 
       </script>
@@ -1677,7 +1679,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         for (var i = 0; i < myElementsToDisappear.length; i++) {
           myElementsToDisappear[i].addEventListener('click', function() {
 
-          })
+          });
         }
         ```
 
@@ -1740,7 +1742,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         #Good stretch, everyone!
 
-        ![](framework/img/workshop/big_stretch.gif)
+        ![A black cat on a light carpet rolls over slightly and then does a great big stretch.](framework/img/workshop/big_stretch.gif)
 
       </script>
     </section>
@@ -1751,7 +1753,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Who wants to show off their own slice of creativity they added to this extension?
 
-        ![](framework/img/workshop/sponge.gif)
+        ![SpongeBob moves his hands apart above his head in an arc and a rainbow appears between his hands.](framework/img/workshop/sponge.gif)
 
       </script>
     </section>
@@ -1763,7 +1765,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         We learned a whole pile of things:
 
         * the basics of how to install and trigger browser extensions
-        * what javascript looks like and how to customize it
+        * what JavaScript looks like and how to customize it
         * HTML attributes
         * placeholder images!
         * some of the ethics around running your code on other people's computers
@@ -1777,7 +1779,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         # You did it!
 
-        ![](framework/img/workshop/done.gif)
+        ![Anna from the movie Frozen squealing with excitement.](framework/img/workshop/done.gif)
       </script>
     </section>
 
@@ -1811,7 +1813,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         <span>Building browser extensions<br></span>
       </h2>
 
-      <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <img class="instructor" src="https://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
       <h2><span class="cursive">with</span> Instructor Name</h2>
       <ul>
         <li><a href="mailto:">hello@email.com</a></li>
