@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,6 +19,7 @@
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+
 <body class="en" data-duration="360">
 
   <main>
@@ -26,7 +28,7 @@
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
         <span>Browser extensions:<br>
-        Hack the planet!</span>
+          Hack the planet!</span>
       </h1>
 
       <!-- FILL IN INSTRUCTOR DETAILS -->
@@ -39,12 +41,17 @@
       </ul>
 
       <div class="sponsor">
-        <p>In partnership with<br><img src="framework/img/telus-logo-white.svg" alt="Telus"><br><img src="framework/img/logo-accenture.svg" alt="Accenture"></p>
+        <p>In partnership with<br><img src="framework/img/telus-logo-white.svg" alt="Telus"><br><img src="framework/img/logo-accenture.svg"
+            alt="Accenture"></p>
       </div>
       <footer>
-        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
-        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+            src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+            prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
+            rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
+          arrow keys to navigate</p>
       </footer>
     </section>
     <section class="slide welcome highlight">
@@ -71,9 +78,13 @@
         </ol>
       </div>
       <footer>
-        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
-        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+            src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://twitter.com/wolfewylie">William Wolfe-Wylie</a> for <a
+            prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName"
+            rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span>
+          arrow keys to navigate</p>
       </footer>
     </section>
 
@@ -308,7 +319,7 @@
 
         ![Failed to load extension. File: ~/Documents/LLC/clc-intro-to-chrome-extensions/first-extension. Error: Manifest is not valid JSON. Line: 12, column: 4, Trailing comma not allowed.](framework/img/workshop/extension_load_error.png)
 
-        The good news it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
+        The good news: it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
       </script>
     </section>
 
@@ -434,7 +445,7 @@
       <script type="text/template">
         #Checking in
 
-        Overall your whole manifest file should look like this.
+        Overall, your whole manifest file should look like this.
 
         ```javascript
         {
@@ -497,7 +508,7 @@
 
         - chrome is the browser<!-- .element: class="delayed" -->
         - pageAction is the button \(Remember the pageAction part of our manifest? It's looking there\)<!-- .element: class="delayed" -->
-        - onClicked is the wait. Don't run the script right away, wait until we click on the button<!-- .element: class="delayed" -->
+        - onClicked is the wait. Don't run the script right away. Wait until we click on the button<!-- .element: class="delayed" -->
         - addListener is the command. When we click, do this:<!-- .element: class="delayed" -->
       </script>
     </section>
@@ -563,7 +574,7 @@
       <script type="text/template">
         #Adding functionality to your script
 
-        Now we go one more layer deeper into the matrix.
+        Now we go another layer deeper into the matrix.
 
         Take a deep breath.
 
@@ -612,7 +623,7 @@
       <script type="text/template">
         #Checking in
 
-        Overall your whole script.js file should look like this.
+        Overall, your whole script.js file should look like this.
 
         ```javascript
         chrome.declarativeContent.onPageChanged.removeRules(
@@ -709,7 +720,7 @@
 
         This raises some necessary ethical questions:
 
-        * When you have the power to run scripts on other people's computers, what responsibilities to have toward those people? <!-- .element: class="delayed" -->
+        * When you have the power to run scripts on other people's computers, what responsibilities do you have toward those people? <!-- .element: class="delayed" -->
         * When people give you power to manage their tabs, what are they trusting you to do? <!-- .element: class="delayed" -->
         * When you have access to someone's browser, what data is it OK to collect, and what data should you leave behind? <!-- .element: class="delayed" -->
         * People are allowing us into their lives and we have a responsibility to not make their lives worse. <!-- .element: class="delayed" -->
@@ -895,13 +906,13 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown >
+    <section class="slide" data-markdown>
       <script type="text/template">
         #The fun life
 
         One of the fun things you can do with a page is change it. Make your mark on it.
 
-        From here onward, we are abandonding the manifest file. We are also abandoning the script file. Instead we are focusing all of our attention on the main.js file. That is where all the fun is to be had.
+        From here onward, we are abandoning the manifest file. We are also abandoning the script file. Instead we are focusing all of our attention on the main.js file. That is where all the fun is to be had.
 
         Instead of changing the background colour, let's do something a little more dramatic.
 
@@ -916,7 +927,7 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown >
+    <section class="slide" data-markdown>
       <script type="text/template">
         #Remember
 
@@ -960,7 +971,7 @@
       <script type="text/template">
         # What is JavaScript?
 
-        * controls the *behavior* of HTML documents
+        * controls the *behaviour* of HTML documents
         * used to animate, hide or show items
         * react to user input
         * process data and more!
@@ -1299,7 +1310,7 @@
 
         Let's break that down:
 
-        * allImages is a variable that conains a list of all the images on the page.
+        * allImages is a variable that contains a list of all the images on the page.
         * i is a variable that tracks which of the images in the list we're currently working with. It's a number that walks up the list of images with us, starting at 0.
         * So i starts at 0, goes until it's reached the length of all the images, increasing by one every time.
         * At each image, it console.logs that image.
@@ -1307,7 +1318,7 @@
       </script>
     </section>
 
-     <section class="slide" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
         # Loops IRL!
 
@@ -1802,13 +1813,16 @@
           <a href="https://developer.chrome.com/webstore/publish">Publishing your extension in the Chrome web store</a>
         </li>
         <li>
-          <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Making it Firefox compatible (hint: It already is)</a>
+          <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Making
+            it Firefox compatible (hint: It already is)</a>
         </li>
         <li>
-          <a href="https://developer.chrome.com/extensions/getstarted">One step more complicated: Chrome Extensions that include their own user interface</a>
+          <a href="https://developer.chrome.com/extensions/getstarted">One step more complicated: Chrome Extensions
+            that include their own user interface</a>
         </li>
         <li>
-          <a href="https://www.tomsguide.com/us/pictures-story/283-best-google-chrome-extensions.html">Inspiration: some of the best Chrome extensions of 2018</a>
+          <a href="https://www.tomsguide.com/us/pictures-story/283-best-google-chrome-extensions.html">Inspiration:
+            some of the best Chrome extensions of 2018</a>
         </li>
       </ul>
     </section>
@@ -1829,7 +1843,8 @@
         <li><a href="http://twitter.com/">@twitter</a></li>
       </ul>
 
-      <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a>
+        based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </section>
 
   </main><!-- cls main section -->
@@ -1853,9 +1868,10 @@
 
     // Grabs all the .snippet elements
     var snippets = document.querySelectorAll('.snippet');
-    for(var i=0; i<snippets.length; i++) {
+    for (var i = 0; i < snippets.length; i++) {
       new CSSSnippet(snippets[i]);
     }
   </script>
 </body>
+
 </html>
