@@ -1,7 +1,4 @@
-## English:
-
-# National Ladies Learning Code Day
-
+## Ladies Learning Code
 ## Intro to Browser Extensions with JavaScript
 
 A full day introductory workshop where learners build their own Chrome Extension using JavaScript.
